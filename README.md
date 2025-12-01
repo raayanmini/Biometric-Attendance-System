@@ -70,8 +70,8 @@ The code is written in bare-metal C and targets **Keil µVision (MDK-ARM)**.
 ---
 
 ## Build & Run (Keil µVision)
-1. git clone https://github.com/raayanmini/Biometric-Attendance-System.git
-2. cd Biometric-Attendance-System
+1. Download the repository as .zip
+2. Extract the .zip file
 3. Open the project `.uvprojx` file in **Keil µVision**.
 4. Select the target for **STM32F401RBT6 / Raayan Mini**.
 5. Build the project (`F7`).
