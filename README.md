@@ -83,4 +83,9 @@ On startup, the firmware initializes USART1, LCD, keypad, SysTick, and interrupt
 - **DOWN (PC9)** → enter **User mode** and capture attendance.
 - **ENTER (PC10)** → enter **Admin mode** for management via keypad.
 
+## 📸 Demo
+
+[![Watch the Demo Video](https://img.youtube.com/vi/u7JY6go5ghE/maxresdefault.jpg)](https://www.youtube.com/watch?v=u7JY6go5ghE)
+
+> 🎥 Click the image to watch the Smart Weather Monitor System in action!
 
