@@ -1,0 +1,96 @@
+# .gitignore for Keil µVision (MDK-ARM) with Packs (STM32F4, device core + startup only)
+
+############################
+# Build output directories
+############################
+
+Objects/
+Listings/
+Output/
+
+# Some Keil projects also create this temp RTE build dir
+.RTE/
+
+############################
+# RTE (MDK5 Run-Time Environment, from Packs)
+############################
+
+RTE/
+
+# Keep these *tracked* (do NOT ignore):
+#   - *.uvprojx       (project)
+#   - *.rteconfig     (RTE configuration)
+#   - any user .c/.h you add yourself
+
+############################
+# Compiled binaries & libraries
+############################
+
+*.axf
+*.elf
+*.hex
+*.bin
+*.lib
+
+############################
+# Object / intermediate files
+############################
+
+*.o
+*.obj
+*.d
+*.dep
+*.crf
+*.dmp
+*.lnp
+
+############################
+# Linker / map / scatter files
+############################
+
+*.map
+*.sct
+
+############################
+# Listings / reports / logs
+############################
+
+*.lst
+*.htm
+*.hif
+*.iex
+*.plg
+*.rpt
+*.tra
+*.build_log.htm
+
+############################
+# Keil µVision user-specific files
+############################
+
+# Per-user GUI / layout / options
+*.uvgui.*
+*.uvguix
+*.uvopt
+*.uvoptx
+*.uvdep
+
+# (Keep *.uvprojx under version control)
+
+############################
+# General editor / OS junk
+############################
+
+# Backups / temp
+*~
+*.bak
+*.tmp
+*.log
+
+# Editor swap files
+*.swp
+*.swo
+
+# OS cruft
+.DS_Store
+Thumbs.db
