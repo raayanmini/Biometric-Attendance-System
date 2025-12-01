@@ -5,8 +5,6 @@ It uses a **GT-521F32 fingerprint sensor** over UART, a **16×2 character LCD**,
 
 The code is written in bare-metal C and targets **Keil µVision (MDK-ARM)**.
 
----
-
 ## Features
 
 - **Fingerprint-based attendance**
@@ -22,8 +20,6 @@ The code is written in bare-metal C and targets **Keil µVision (MDK-ARM)**.
 - **4×4 keypad support**
   - Numeric and basic menu inputs
 
----
-
 ## Hardware
 
 - Raayan Mini board (STM32F401RBT6, Cortex-M4)
@@ -34,7 +30,6 @@ The code is written in bare-metal C and targets **Keil µVision (MDK-ARM)**.
 - ST-Link V2 debugger/programmer
 - External 5 V / 3.3 V supply as per board requirements
 
----
 
 ## Pin Configuration
 
@@ -60,8 +55,6 @@ The code is written in bare-metal C and targets **Keil µVision (MDK-ARM)**.
 
 > If your board revision uses different pins, please update the corresponding GPIO/EXTI configuration functions.
 
----
-
 ## Project Structure
 
 - `Src/`
@@ -73,22 +66,21 @@ The code is written in bare-metal C and targets **Keil µVision (MDK-ARM)**.
   - `Interrupt.c` – EXTI configuration and NVIC setup
   - `systemticktimer.c` – SysTick-based millisecond delays
   - `gpio.c`, `my_string.c` – basic GPIO and utility functions
-- `.gitignore`
-  - Keil-specific ignore rules for `Objects/`, `Listings/`, `Output/`, `.RTE/`, temp and editor files
 
 ---
 
 ## Build & Run (Keil µVision)
-
-1. Open the project `.uvprojx` file in **Keil µVision**.
-2. Select the target for **STM32F401RBT6 / Raayan Mini**.
-3. Build the project (`F7`).
-4. Connect the board via **ST-Link V2**.
-5. Flash the firmware (`Ctrl + F8`) and reset the board.
+1. git clone https://github.com/raayanmini/Biometric-Attendance-System.git
+2. cd Biometric-Attendance-System
+3. Open the project `.uvprojx` file in **Keil µVision**.
+4. Select the target for **STM32F401RBT6 / Raayan Mini**.
+5. Build the project (`F7`).
+6. Connect the board via **ST-Link V2**.
+7. Flash the firmware (`Ctrl + F8`) and reset the board.
 
 On startup, the firmware initializes USART1, LCD, keypad, SysTick, and interrupts, then waits for:
 
 - **DOWN (PC9)** → enter **User mode** and capture attendance.
 - **ENTER (PC10)** → enter **Admin mode** for management via keypad.
 
-The focus of this project is to keep the code readable and straightforward while handling multiple peripherals together, so it can be reused and extended inside the organization.
+
